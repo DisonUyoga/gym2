@@ -1,0 +1,80 @@
+@use './mixins' as *;
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root {
+  --primary-color: #6f55f2;
+  --heading-color: #132742;
+  --bg-gradient: linear-gradient(
+    90deg,
+    rgba(103, 101, 240, 1) 27%,
+    rgba(141, 141, 235, 1) 85%
+  );
+  --font-name: "Questrial", sans-serif;
+
+  /* 
+        #9785f2
+        #b5a9f3
+        #d3cef2
+        #d7337a
+    */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: var(--small-text-color);
+  font-size: 1rem;
+}
+
+h1,
+h2 {
+  font-size: var(--heading-fontSize);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img{
+  width: 100%;
+}
+section{
+  padding: 60px 0px;
+}
+.section__title{
+  color: var(--primary-color);
+  font-weight: 600;
+}
+@media only screen and (max-width: 728px){
+  section{
+    padding: 40px 0px;
+  }
+}
+html{
+  scroll-behavior: smooth;
+}
+

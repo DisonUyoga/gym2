@@ -1,0 +1,90 @@
+@use '../../../mixins' as *;
+.footer{
+  background: #eeeaff;
+  
+  .footer__wrapper{
+   padding-inline: 15px;
+   margin: 10px;
+  .inner__footer{
+    
+   justify-content: space-between;
+    column-gap: 2rem;
+.footer__box{
+  width: 100%;
+  display: block;
+.logo{
+  display: flex;
+  align-items: center;
+  .logo__img{
+    background: var(--bg-gradient);
+    width: 35px;
+    height: 35px;
+    line-height:35px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    color: var(--heading-color);
+    font-weight: 700 !important;
+  }
+
+}
+p{
+  color: var(--heading-color);
+  line-height: 28px;
+  margin-top: 10px;
+  min-width: 200px;
+  
+  display: block;
+}
+.footer__title{
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+
+  
+}
+@include breakpoint-down(medium){
+  .footer__title{
+    margin-bottom: 10px;
+  }
+}
+.footer__links{
+  width: 100%;
+  display: block;
+    li{
+      line-height: 28px;
+      min-width: 100px;
+      a{
+       
+        color: var(--heading-color);
+        cursor: pointer;
+        &:hover{
+          color: var(--primary-color);
+        }
+      }
+    }
+}
+
+}
+
+
+}
+@include breakpoint-down(medium){
+  .inner__footer{
+    justify-content: center;
+    width: 100%;
+  }
+}
+}
+
+}
+
+

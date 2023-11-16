@@ -1,0 +1,338 @@
+@use '../../../mixins' as *;
+
+
+  
+
+  .hero__content{
+    .section__title{
+      font-size: 3rem;
+      padding-right: 60px;
+      margin-bottom: 20px;
+      padding: 10px;
+      .highlights{
+        color: var(--primary-color);
+      }
+    }
+    @include breakpoint-down(medium){
+      .section__title{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        // text-align: center;
+        
+      }
+    }
+    @include breakpoint-down(small){
+      .section__title{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        
+      }
+    }
+    
+    p{
+      font-size: 1.1rem;
+      color: var(--heading-color);
+      margin-bottom: 30px;
+      line-height: 30px;
+      
+    }
+    @include breakpoint-down(medium){
+      p{
+      padding: 10px;
+      
+      }
+    }
+
+    .hero__btns{
+      display: flex;
+      align-items: center;
+      column-gap: 3rem;
+      
+      .watch__btn{
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        color: var(--heading-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 2px 10px;
+        cursor: pointer;
+
+        span{
+          background: #fff;
+          border-radius: 5px;
+          padding: 10px;
+          color:  var(--primary-color);
+          font-size: 1.3rem;
+          box-shadow: 3px 3px 8px -1px #d3cef2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+        }
+      }
+      @include breakpoint-down(medium){
+        .watch__btn{
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+      
+
+      .register__btn{
+        border: none;
+        outline:none ;
+        padding: 10px 20px;
+        color: #fff;
+        background: var(--primary-color);
+        border-radius: 5px;
+        font-family: var(--font-name);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        
+      }
+    }
+    @include breakpoint-down(medium){
+      .hero__btns{
+       font-size: 0.9rem;
+       column-gap: 2rem;
+       
+      }
+     
+    }
+  }
+  @include breakpoint-down(medium){
+      .hero__content{
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+  }
+
+  .hero__img{
+    .hero__img-wrapper{
+      position: relative;
+      z-index: 1;
+      .box-01{
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+        // background: rgba(141,141,235,1);
+        border: 25px solid rgba(141,141,235,1);
+        
+      }
+
+      @include breakpoint-down(medium){
+        .box-01{
+          width: 300px;
+          height: 300px
+        }
+      }
+      .box-02{
+        @extend .box-01;
+        width: 350px;
+        height: 350px;
+        border: 25px solid #b5a9f3;
+       
+  
+      }
+      @include breakpoint-down(medium){
+        .box-02{
+          width: 250px;
+          height: 250px;
+        }
+      }
+      .box-03{
+        @extend .box-02;
+        width: 18.75rem;
+        height: 18.75rem;
+        border: 25px solid #d3cef2;
+        
+        .box__img{
+          position: absolute;
+          top: -12%;
+          left: -13%;
+          z-index: 10;
+          img{
+            width: 121.5%;
+          }
+          @include breakpoint-down(medium){
+            img{
+              width: 100%;
+            }
+          }
+        }
+        .box__img{
+          top: -6px;
+          left: -15px;
+        }
+        @include breakpoint-down(medium){
+          .box__img{
+            top: 70px;
+            left: 20px;
+          }
+        }
+      }
+      @include breakpoint-down(medium){
+        .box-03{
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+    .heart__rate{
+      width: 6.25rem;
+      position: absolute;
+      top: 55%;
+      left: -11%;
+      z-index: 10;
+      box-shadow: -3px 3px 8px -1px #d3cef2;
+      text-align: center;
+      background: #fff;
+      border-radius: 5px;
+      padding: 15px 10px;
+      span{
+        width: 30px;
+        height: 25px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #d3cef2;
+        color: #d7337a;
+        border-radius: 3px;
+        padding: 3px;
+      }
+    
+      h5,h6{
+        font-size: 0.8rem;
+        color: var(--heading-color);
+        font-weight: 600;
+      }
+      @include breakpoint-down(medium){
+        h6,h5{
+         font-weight: 400;
+        }
+      }
+      h5{
+        margin-bottom: 10px;
+      }
+      @include breakpoint-down(medium){
+        h5{
+         margin-bottom: 5px;
+        }
+      }
+      h6{
+        margin-top: 10px;
+      }
+      @include breakpoint-down(medium){
+        h6{
+         margin-top: 5px;
+        }
+      }
+    }
+
+    @include breakpoint-down(medium){
+      .heart__rate{
+        left: -2%;
+        padding: 10px 0;
+        width: 80px;
+      }
+    }
+
+    .gym__location{
+     position: absolute;
+     top: -2%;
+     right: -17%;
+     z-index: 10;
+     box-shadow: 3px -3px 8px -1px #d3cef2;
+     text-align: center;
+     background: #fff;
+     border-radius: 5px;
+     padding: 1.2rem;
+     span{
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-color);
+      color: #fff;
+      font-size:1.5rem ;
+      border-radius: 50%;
+     }
+     @include breakpoint-down(medium){
+      span{
+       width: 40px;
+       height: 40px;
+      }
+    }
+     h5{
+      color: var(--heading-color);
+      margin-top: 1rem;
+      font-size: 0.9rem;
+
+     }
+     @include breakpoint-down(medium){
+      h5{
+       margin-top: 5px;
+       font-size: 0.8rem;
+      }
+    }
+    }
+    @include breakpoint-down(medium){
+      .gym__location{
+        right: 0;
+        padding: 10px 5px;
+        top: -10%;
+      }
+    }
+    .dumble__icon{
+      position: absolute;
+      top: -2%;
+      left: -5%;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #d7337a;
+      color: #fff;
+      border-radius: 5px;
+      padding: 15px 10px;
+
+      img{
+        width: 100%;
+      }
+     
+    }
+    @include breakpoint-down(medium){
+      .dumble__icon{
+       top: -8%;
+      }
+    }
+
+  }
+  @include breakpoint-down(large){
+    .hero__img{
+      margin-top: 3.5rem;
+      margin-bottom: 3.125rem;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+
+
+
+.loading{
+  text-align:center;
+}
